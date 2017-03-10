@@ -3,22 +3,21 @@
  * created on 15.12.2015
  */
 
+/* CONSTANTS */
+const SYSTEM_PATH   = '/';
+const FRONTEND_PATH = 'frontend';
+const IMAGES_ROOT   = 'assets/img/';
+
 /* GLOBALS */
-var web_root = window.location['protocol'] + '//' + window.location['host'] + '/'; // The web
-                                                                                   // root of
-                                                                                   // the
-                                                                                   // system
+var web_root = window.location['protocol'] + '//'
+               + window.location['host'] + '/'; // The web root of the system
+
 var system_root   = web_root; // The links web root (web_root + index.php)
 var frontend_root = web_root + FRONTEND_PATH; // The front end web root
 csrf_token        = null;
 
 (function () {
   'use strict';
-
-  /* CONSTANTS */
-  const SYSTEM_PATH   = '/';
-  const FRONTEND_PATH = 'frontend';
-  const IMAGES_ROOT   = 'assets/img/';
 
   angular.module('BrainPal.theme')
          .constant('layoutSizes', {
