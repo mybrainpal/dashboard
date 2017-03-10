@@ -30,7 +30,7 @@
     //   icon: 'ion-document',
     //   subMenu: [{
     //     title: 'Sign In',
-    //     fixedHref: 'auth.html',
+    //     fixedHref: 'login.html',
     //     blank: true
     //   }, {
     //     title: 'Sign Up',
