@@ -6,10 +6,10 @@
 
   /** @ngInject */
   function baWizardCtrl($scope) {
-    var vm = this;
+    var vm  = this;
     vm.tabs = [];
 
-    vm.tabNum = 0;
+    vm.tabNum   = 0;
     vm.progress = 0;
 
     vm.addTab = function (tab) {

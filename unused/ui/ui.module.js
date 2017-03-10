@@ -18,21 +18,21 @@
     'BrainPal.pages.ui.slider',
     'BrainPal.pages.ui.panels',
   ])
-      .config(routeConfig);
+         .config(routeConfig);
 
   /** @ngInject */
   function routeConfig($stateProvider) {
     $stateProvider
-        .state('ui', {
-          url: '/ui',
-          template : '<ui-view  autoscroll="true" autoscroll-body-top></ui-view>',
-          abstract: true,
-          title: 'UI Features',
-          sidebarMeta: {
-            icon: 'ion-android-laptop',
-            order: 200,
-          },
-        });
+      .state('ui', {
+        url        : '/ui',
+        template   : '<ui-view  autoscroll="true" autoscroll-body-top></ui-view>',
+        abstract   : true,
+        title      : 'UI Features',
+        sidebarMeta: {
+          icon : 'ion-android-laptop',
+          order: 200,
+        },
+      });
   }
 
 })();

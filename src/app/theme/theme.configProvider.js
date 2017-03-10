@@ -46,16 +46,16 @@
         borderDark : basic.borderDark,
 
         primary: colorScheme.primary,
-        info       : colorScheme.info,
+        info   : colorScheme.info,
         success: colorScheme.success,
         warning: colorScheme.warning,
-        danger     : colorScheme.danger,
+        danger : colorScheme.danger,
 
         primaryLight: colorHelper.tint(colorScheme.primary, 30),
-        infoLight  : colorHelper.tint(colorScheme.info, 30),
+        infoLight   : colorHelper.tint(colorScheme.info, 30),
         successLight: colorHelper.tint(colorScheme.success, 30),
         warningLight: colorHelper.tint(colorScheme.warning, 30),
-        dangerLight: colorHelper.tint(colorScheme.danger, 30),
+        dangerLight : colorHelper.tint(colorScheme.danger, 30),
 
         primaryDark: colorHelper.shade(colorScheme.primary, 15),
         infoDark   : colorHelper.shade(colorScheme.info, 15),

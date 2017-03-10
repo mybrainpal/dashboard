@@ -19,7 +19,7 @@
       function _factory() {
         var isMenuCollapsed = shouldMenuBeCollapsed();
 
-        this.getMenuItems       = function () {
+        this.getMenuItems = function () {
           var states    = defineMenuItemStates();
           var menuItems = states.filter(function (item) {
             return item.level == 0;
@@ -36,7 +36,7 @@
         };
 
         this.shouldMenuBeCollapsed = shouldMenuBeCollapsed;
-        this.canSidebarBeHidden = canSidebarBeHidden;
+        this.canSidebarBeHidden    = canSidebarBeHidden;
 
         this.setMenuCollapsed = function (isCollapsed) {
           isMenuCollapsed = isCollapsed;

@@ -20,7 +20,7 @@
         if (attrs.baPanelTitle) {
           var titleTpl = '<div class="panel-heading clearfix"><h3 class="panel-title">'
                          + attrs.baPanelTitle + '</h3></div>';
-          res = titleTpl + res; // title should be before
+          res          = titleTpl + res; // title should be before
         }
         return res;
       }

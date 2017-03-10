@@ -6,17 +6,17 @@
   'use strict';
 
   angular.module('BrainPal.pages.profile', [])
-      .config(routeConfig);
+         .config(routeConfig);
 
   /** @ngInject */
   function routeConfig($stateProvider) {
     $stateProvider
-        .state('profile', {
-          url: '/profile',
-          title: 'Profile',
-          templateUrl: 'app/pages/profile/profile.html',
-          controller: 'ProfilePageCtrl',
-        });
+      .state('profile', {
+        url        : '/profile',
+        title      : 'Profile',
+        templateUrl: 'app/pages/profile/profile.html',
+        controller : 'ProfilePageCtrl',
+      });
   }
 
 })();

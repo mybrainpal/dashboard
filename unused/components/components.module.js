@@ -10,21 +10,21 @@
     'BrainPal.pages.components.timeline',
     'BrainPal.pages.components.tree',
   ])
-      .config(routeConfig);
+         .config(routeConfig);
 
   /** @ngInject */
   function routeConfig($stateProvider) {
     $stateProvider
-        .state('components', {
-          url: '/components',
-          template : '<ui-view  autoscroll="true" autoscroll-body-top></ui-view>',
-          abstract: true,
-          title: 'Components',
-          sidebarMeta: {
-            icon: 'ion-gear-a',
-            order: 100,
-          },
-        });
+      .state('components', {
+        url        : '/components',
+        template   : '<ui-view  autoscroll="true" autoscroll-body-top></ui-view>',
+        abstract   : true,
+        title      : 'Components',
+        sidebarMeta: {
+          icon : 'ion-gear-a',
+          order: 100,
+        },
+      });
   }
 
 })();

@@ -10,14 +10,14 @@
 
   /** @ngInject */
   function baPanelBlurHelper($q) {
-    var res       = $q.defer();
-    var computedStyle        = getComputedStyle(document.body, ':before');
-    var image     = new Image();
-    image.src     = computedStyle.backgroundImage.replace(/url\((['"])?(.*?)\1\)/gi, '$2');
-    image.onerror = function () {
+    var res           = $q.defer();
+    var computedStyle = getComputedStyle(document.body, ':before');
+    var image         = new Image();
+    image.src         = computedStyle.backgroundImage.replace(/url\((['"])?(.*?)\1\)/gi, '$2');
+    image.onerror     = function () {
       res.reject();
     };
-    image.onload  = function () {
+    image.onload      = function () {
       res.resolve();
     };
 
@@ -29,13 +29,13 @@
       var elemW = document.documentElement.clientWidth;
       var elemH = document.documentElement.clientHeight;
       if (elemW <= 640) return;
-      var imgRatio = (image.height / image.width);       // original img ratio
+      var imgRatio       = (image.height / image.width);       // original img ratio
       var containerRatio = (elemH / elemW);     // container ratio
 
       var finalHeight, finalWidth;
       if (containerRatio > imgRatio) {
         finalHeight = elemH;
-        finalWidth = (elemH / imgRatio);
+        finalWidth  = (elemH / imgRatio);
       } else {
         finalWidth  = elemW;
         finalHeight = (elemW * imgRatio);

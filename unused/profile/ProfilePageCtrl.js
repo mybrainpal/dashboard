@@ -6,14 +6,14 @@
   'use strict';
 
   angular.module('BrainPal.pages.profile')
-    .controller('ProfilePageCtrl', ProfilePageCtrl);
+         .controller('ProfilePageCtrl', ProfilePageCtrl);
 
   /** @ngInject */
   function ProfilePageCtrl($scope, fileReader, $filter, $uibModal) {
     $scope.picture = $filter('profilePicture')('Nasta');
 
     $scope.removePicture = function () {
-      $scope.picture = $filter('appImage')('theme/no-photo.png');
+      $scope.picture   = $filter('appImage')('theme/no-photo.png');
       $scope.noPicture = true;
     };
 
@@ -68,19 +68,19 @@
 
     $scope.showModal = function (item) {
       $uibModal.open({
-        animation: false,
-        controller: 'ProfileModalCtrl',
-        templateUrl: 'app/pages/profile/profileModal.html'
-      }).result.then(function (link) {
-          item.href = link;
-        });
+                       animation  : false,
+                       controller : 'ProfileModalCtrl',
+                       templateUrl: 'app/pages/profile/profileModal.html'
+                     }).result.then(function (link) {
+        item.href = link;
+      });
     };
 
     $scope.getFile = function () {
       fileReader.readAsDataUrl($scope.file, $scope)
-          .then(function (result) {
-            $scope.picture = result;
-          });
+                .then(function (result) {
+                  $scope.picture = result;
+                });
     };
 
     $scope.switches = [true, true, false, true, true, false];

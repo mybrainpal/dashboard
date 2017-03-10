@@ -6,12 +6,12 @@
   'use strict';
 
   angular.module('BrainPal.pages.profile')
-    .controller('ProfileModalCtrl', ProfileModalCtrl);
+         .controller('ProfileModalCtrl', ProfileModalCtrl);
 
   /** @ngInject */
   function ProfileModalCtrl($scope, $uibModalInstance) {
     $scope.link = '';
-    $scope.ok = function () {
+    $scope.ok   = function () {
       $uibModalInstance.close($scope.link);
     };
   }

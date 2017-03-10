@@ -16,7 +16,7 @@
           var element = $event.target;
           $(element).height(0);
           var height = $(element)[0].scrollHeight;
-          height = (height < 16) ? 16 : height;
+          height     = (height < 16) ? 16 : height;
           $(element).height(height);
         });
 
@@ -25,7 +25,7 @@
           var element = elem;
           $(element).height(0);
           var height = $(element)[0].scrollHeight;
-          height = (height < 16) ? 16 : height;
+          height     = (height < 16) ? 16 : height;
           $(element).height(height);
         }, 0)
       }

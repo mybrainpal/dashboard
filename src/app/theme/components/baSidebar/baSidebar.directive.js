@@ -40,7 +40,7 @@
         // watch window resize to change menu collapsed state if needed
         function _onWindowResize() {
           var newMenuCollapsed = baSidebarService.shouldMenuBeCollapsed();
-          var newMenuHeight = _calculateMenuHeight();
+          var newMenuHeight    = _calculateMenuHeight();
           if (newMenuCollapsed != baSidebarService.isMenuCollapsed() ||
               scope.menuHeight != newMenuHeight) {
             scope.$apply(function () {
