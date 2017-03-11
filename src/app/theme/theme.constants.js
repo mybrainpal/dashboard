@@ -3,18 +3,8 @@
  * created on 15.12.2015
  */
 
-/* CONSTANTS */
-const BACKEND_URL   = 'http://localhost:8080';
-const FRONTEND_PATH = 'frontend';
 const IMAGES_ROOT   = 'assets/img/';
 
-/* GLOBALS */
-var web_root = window.location['protocol'] + '//'
-               + window.location['host'] + '/'; // The web root of the system
-
-var system_root   = web_root; // The links web root (web_root + index.php)
-var frontend_root = web_root + FRONTEND_PATH; // The front end web root
-var csrf_token        = null;
 
 (function () {
   'use strict';

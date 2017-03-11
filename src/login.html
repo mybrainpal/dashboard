@@ -32,26 +32,35 @@
   <!-- css files will be automatically insert here -->
   <!-- endinject -->
   <!-- endbuild -->
+
+  <!-- build:js(src) scripts/vendor.js -->
+  <!-- bower:js -->
+  <!-- run `gulp inject` to automatically populate bower script dependencies -->
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <script src='app/constants.js'></script>
+  <script src='app/functions.js'></script>
+  <script src='app/theme/theme.login.js'></script>
 </head>
 <body>
 <main class = 'auth-main'>
   <div class = 'auth-block'>
-    <h1>Sign in to Blur Admin</h1>
-    <a href = 'reg.html' class = 'auth-link'>New to Blur Admin? Sign up!</a>
+    <h1>Sign in to BrainPal</h1>
 
-    <form class = 'form-horizontal'>
+    <form id='divUserLoginForm' class = 'form-horizontal' onsubmit='login(); return false;'>
       <div class = 'form-group'>
-        <label for = 'inputEmail3' class = 'col-sm-2 control-label'>Email</label>
+        <label for = 'inputUsername' class = 'col-sm-2 control-label'>Username</label>
 
         <div class = 'col-sm-10'>
-          <input type = 'email' class = 'form-control' id = 'inputEmail3' placeholder = 'Email'>
+          <input type = 'text' class = 'form-control' name = 'username' id = 'inputUsername' placeholder = 'Username'>
         </div>
       </div>
       <div class = 'form-group'>
-        <label for = 'inputPassword3' class = 'col-sm-2 control-label'>Password</label>
+        <label for = 'inputPassword' class = 'col-sm-2 control-label'>Password</label>
 
         <div class = 'col-sm-10'>
-          <input type = 'password' class = 'form-control' id = 'inputPassword3' placeholder = 'Password'>
+          <input type = 'password' class = 'form-control' name = 'password' id = 'inputPassword' placeholder = 'Password'>
         </div>
       </div>
       <div class = 'form-group'>
@@ -62,15 +71,7 @@
       </div>
     </form>
 
-    <div class = 'auth-sep'><span><span>or Sign in with one click</span></span></div>
-
-    <div class = 'al-share-auth'>
-      <ul class = 'al-share clearfix'>
-        <li><i class = 'socicon socicon-facebook' title = 'Share on Facebook'></i></li>
-        <li><i class = 'socicon socicon-twitter' title = 'Share on Twitter'></i></li>
-        <li><i class = 'socicon socicon-google' title = 'Share on Google Plus'></i></li>
-      </ul>
-    </div>
+    <div id='DivUserLoginError' class = 'auth-sep' style='display: none;'><span><span id='labelUserLoginError'></span></span></div>
   </div>
 </main>
 </body>
